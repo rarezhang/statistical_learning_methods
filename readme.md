@@ -1,13 +1,22 @@
 # statistical learning methods  
 
-reading notes of [this book](https://book.douban.com/subject/10590856/)  
+reading notes of 
+[统计学习方法](https://book.douban.com/subject/10590856/)  
+[A Course in Machine Learning](http://ciml.info/)  
+
 
 ### statistical learning methods  
 - methods = model + strategy + algorithm  
     + model = conditional probability distribution + decision function  
     + strategy = [loss function (cost function)](####loss-function-and-cost-function)  
-    + algorithm    
+    + algorithm: solve optimization problems  
 - supervised learning  
+    + classification: identifying to which of a set of categories a new observation belongs, on the basis of a training set of data  
+    + tagging problem (structure prediction): 
+        * input: observation sequence; output: tag sequence or status sequence  
+        * e.g., part of speech tagging  
+    + regression: estimate relationship between a dependent variable and one or more independent variables  
+        * linear regression and multiple linear regression  
 - unsupervised learning  
 - semi-supervised learning  
 - reinforcement learning  
@@ -40,9 +49,65 @@ reading notes of [this book](https://book.douban.com/subject/10590856/)
     + e.g., maximum posterior probability estimation (MAP)  
     
     
+### training error and test error  
+- training error & test error  
+![training error](https://cloud.githubusercontent.com/assets/5633774/24626957/eaed9a92-1867-11e7-83ab-d1529faa3d1f.png)  
+![test error](https://cloud.githubusercontent.com/assets/5633774/24626979/ffb96992-1867-11e7-8aa7-dd55eb952c6b.png)  
+    + note: **L** --> lost function  
+- error rate: ```Lost = 0-1 loss function```  
+![error rate](https://cloud.githubusercontent.com/assets/5633774/24627073/62a77f12-1868-11e7-9d18-b5a9341b09f4.png)  
+    + note: **I** --> indicator function: ```if y=f(x) I=0, o.w. I=1```  
+- accuracy:      
+![accuracy](https://cloud.githubusercontent.com/assets/5633774/24627177/bc137880-1868-11e7-9fb7-32f00d624d6c.png)  
+![error rate+accuracy](https://cloud.githubusercontent.com/assets/5633774/24627200/cc96dc92-1868-11e7-9218-4ef3b4dcb9a5.png)  
     
     
-1.  
+### regularization and cross validation
+- regularization: introduce additional information (regularization term) to a general loss function --> in order to to prevent overfitting. 
+![regularization](https://cloud.githubusercontent.com/assets/5633774/24634703/18990280-1884-11e7-8b3c-0b53087688a5.png)  
+    + Occam's razor: a problem-solving principle --> among competing hypotheses, the one with the fewest assumptions should be selected  
+- cross validation: a model validation technique for assessing how the results of a statistical analysis will generalize to an independent data set    
+    
+
+### generalization error 
+- measure of how accurately an algorithm is able to predict outcome values for previously unseen data  
+![generalization error](https://cloud.githubusercontent.com/assets/5633774/24634944/5b5e76a8-1885-11e7-88c6-530511000db1.png)  
+- the performance of a machine learning algorithm is measured by plots of the generalization error values through the learning process (learning curves) --> smaller the generalization error, better the model  
+    + generalization error bound: the generalization error is less than some error bound --> smaller the generalization error bound, better the model  
+
+### generative model and discriminative model 
+- generative model: learns the joint probability distribution p(x,y)  
+    + e.g., Naive Bayes, Hidden Markov Model  
+    + converge fast  
+- discriminative model: learns the conditional probability distribution p(y|x) --> the probability of y given x
+    + e.g., K Nearest Neighbor, Perceptron, Decision Tree, Logistic Regression, Maximum Entropy, Support Vector Machine, Boosting Method, Conditional Random Field  
+    + higher accuracy  
+
+
+### linearly separable data set (linear separability)
+- there exists at least one **hyperplane** (line) in the feature space with all points from one class on one side of the line and all points from another class on the other side   
+------------------------------------------
+    
+1. Perceptron  
+supervised learning; binary classifiers; linearly separable data; allows for online learning  
+    - feature space: 
+    ![perceptron feature space](https://cloud.githubusercontent.com/assets/5633774/24635791/a789c244-188a-11e7-9fc3-6ad9db126e58.png)  
+    - output space:  
+    ![perceptron output space](https://cloud.githubusercontent.com/assets/5633774/24635806/bde4a824-188a-11e7-828f-c244ccf5cf90.png)  
+    - feature space --> output space:  
+    ![perceptron](https://cloud.githubusercontent.com/assets/5633774/24635834/e510222a-188a-11e7-9616-b92ac3b3e3d6.png)  
+    ![perceptron sign](https://cloud.githubusercontent.com/assets/5633774/24635839/f6e79b18-188a-11e7-9ff7-926659571e08.png)  
+    - separating hyperplane: **_w_** and **_b_**  
+    ![perceptron](https://cloud.githubusercontent.com/assets/5633774/24635873/280f7242-188b-11e7-933f-6f4f2b548d80.png)  
+    - loss function (empirical risk function):  
+    ![perceptron loss fun](https://cloud.githubusercontent.com/assets/5633774/24635994/e310438c-188b-11e7-828e-eff91b014927.png)  
+    M: misclassified samples  
+    - optimization goal  
+    ![perceptron optimization goal](https://cloud.githubusercontent.com/assets/5633774/24636056/51310ad6-188c-11e7-9b60-975e3a04b2db.png)  
+    - [python code]()
+    
+
+
 2.  
 3.  
 4.  
