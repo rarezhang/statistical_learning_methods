@@ -1,8 +1,7 @@
 # statistical learning methods  
 
 reading notes of 
-[统计学习方法](https://book.douban.com/subject/10590856/)  
-[A Course in Machine Learning](http://ciml.info/)  
+[统计学习方法](https://book.douban.com/subject/10590856/) and [A Course in Machine Learning](http://ciml.info/)  
 
 
 ### statistical learning methods  
@@ -89,7 +88,7 @@ reading notes of
 
 ------------------------------------------
     
-1. Perceptron  
+1. [Perceptron](https://github.com/rarezhang/statistical_learning_methods/blob/master/Perceptron.py)  
 supervised learning; binary classifiers; only works for linearly separable data; allows for online learning; error driven  
     - feature space:  
     ![perceptron feature space](https://cloud.githubusercontent.com/assets/5633774/24635791/a789c244-188a-11e7-9fc3-6ad9db126e58.png)  
@@ -105,16 +104,16 @@ supervised learning; binary classifiers; only works for linearly separable data;
     M: misclassified samples  
     - optimization goal  
     ![perceptron optimization goal](https://cloud.githubusercontent.com/assets/5633774/24636056/51310ad6-188c-11e7-9b60-975e3a04b2db.png)  
-    - [python code](https://github.com/rarezhang/statistical_learning_methods/blob/master/Perceptron.py)  
+
     
 
 
-2.  
-3.  
-4.  
-5.  
-6.  
-7.  
-8.  
-9.  
-10.  
+2. [K-Nearest Neighbor]()  
+3. [Naive Bayes]()  
+4. [Decision Tree]()  
+5. [Logistic Regression]()  
+6. [Support Vector Machine]()  
+7. [AdaBoost]()  
+8. [EM]()  
+9. [Hidden Markov Model]()  
+10. [Random Field]() 
