@@ -105,7 +105,7 @@ supervised learning; binary classifiers; only works for linearly separable data;
     M: misclassified samples  
     - optimization goal  
     ![perceptron optimization goal](https://cloud.githubusercontent.com/assets/5633774/24636056/51310ad6-188c-11e7-9b60-975e3a04b2db.png)  
-    - [python code]()
+    - [python code](https://github.com/rarezhang/statistical_learning_methods/blob/master/Perceptron.py)  
     
 
 
