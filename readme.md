@@ -123,10 +123,15 @@ supervised learning; binary classifiers; only works for linearly separable data;
     ![knn feature space](https://cloud.githubusercontent.com/assets/5633774/24672596/2f8d7ce0-192a-11e7-956c-6e1bb2ca2f45.png)  
     - output space:  
     ![knn output space](https://cloud.githubusercontent.com/assets/5633774/24672626/41d6bd8a-192a-11e7-873d-b65d2925dad4.png)  
-    - feature space --> output space:  
+    - feature space --> output space: majority voting rule  
     ![knn](https://cloud.githubusercontent.com/assets/5633774/24672649/571feb8a-192a-11e7-8bc0-ef17b9ca9039.png)  
     note: **I** --> indicator function: ```if y=c I=1, o.w. I=0```  
-    
+    - **_k_**:  
+        + small k (decrease approximation error; increase estimation error; sensitive to neighbors) --> complicated model --> prone to over-fitting  
+        + large k (decrease estimation error; increase approximation error) --> simple model --> prone to under-fitting  
+    - k-dimensional tree (kd tree): a space-partitioning data structure for organizing points in a k-dimensional space  
+        
+        
 3. [Naive Bayes]()  
 4. [Decision Tree]()  
 5. [Logistic Regression]()  
