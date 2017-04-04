@@ -62,7 +62,7 @@ reading notes of
     
     
 ### regularization and cross validation
-- regularization: introduce additional information (regularization term) to a general loss function --> in order to to prevent overfitting. 
+- regularization: introduce additional information (regularization term) to a general loss function --> in order to to prevent overfitting  
 ![regularization](https://cloud.githubusercontent.com/assets/5633774/24634703/18990280-1884-11e7-8b3c-0b53087688a5.png)  
     + Occam's razor: a problem-solving principle --> among competing hypotheses, the one with the fewest assumptions should be selected  
 - cross validation: a model validation technique for assessing how the results of a statistical analysis will generalize to an independent data set    
@@ -86,6 +86,16 @@ reading notes of
 ### linearly separable data set (linear separability)
 - there exists at least one **hyperplane** (line) in the feature space with all points from one class on one side of the line and all points from another class on the other side   
 
+
+### distance metric
+![relation distance](https://cloud.githubusercontent.com/assets/5633774/24673023/ab430aa2-192b-11e7-8312-fc2e56c877ab.png)  
+![distance metric](https://cloud.githubusercontent.com/assets/5633774/24672764/bc4f9366-192a-11e7-809b-4df1d588cb0d.png)  
+- Euclidean distance: ```p=2```  
+![euclidean](https://cloud.githubusercontent.com/assets/5633774/24672801/e468b666-192a-11e7-96e8-ac0c97721f16.png)  
+- Manhattan distance: ```p=1```  
+![manhattan](https://cloud.githubusercontent.com/assets/5633774/24672833/03c77e02-192b-11e7-95d6-11b07434da70.png)  
+- Max distance between coordinates: ```p=∞```  
+![max coordinates](https://cloud.githubusercontent.com/assets/5633774/24672997/8e0d60d6-192b-11e7-833f-2a4e1d8ea05d.png)  
 ------------------------------------------
     
 1. [Perceptron](https://github.com/rarezhang/statistical_learning_methods/blob/master/Perceptron.py)  
@@ -109,6 +119,14 @@ supervised learning; binary classifiers; only works for linearly separable data;
 
 
 2. [K-Nearest Neighbor]()  
+    - feature space:  
+    ![knn feature space](https://cloud.githubusercontent.com/assets/5633774/24672596/2f8d7ce0-192a-11e7-956c-6e1bb2ca2f45.png)  
+    - output space:  
+    ![knn output space](https://cloud.githubusercontent.com/assets/5633774/24672626/41d6bd8a-192a-11e7-873d-b65d2925dad4.png)  
+    - feature space --> output space:  
+    ![knn](https://cloud.githubusercontent.com/assets/5633774/24672649/571feb8a-192a-11e7-8bc0-ef17b9ca9039.png)  
+    note: **I** --> indicator function: ```if y=c I=1, o.w. I=0```  
+    
 3. [Naive Bayes]()  
 4. [Decision Tree]()  
 5. [Logistic Regression]()  
@@ -116,4 +134,9 @@ supervised learning; binary classifiers; only works for linearly separable data;
 7. [AdaBoost]()  
 8. [EM]()  
 9. [Hidden Markov Model]()  
-10. [Random Field]() 
+10. [Random Field]()  
+
+11. Latent Dirichlet allocation 
+12. Monte Carlo
+
+
