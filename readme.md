@@ -86,11 +86,12 @@ reading notes of
 
 ### linearly separable data set (linear separability)
 - there exists at least one **hyperplane** (line) in the feature space with all points from one class on one side of the line and all points from another class on the other side   
+
 ------------------------------------------
     
 1. Perceptron  
-supervised learning; binary classifiers; linearly separable data; allows for online learning  
-    - feature space: 
+supervised learning; binary classifiers; only works for linearly separable data; allows for online learning; error driven  
+    - feature space:  
     ![perceptron feature space](https://cloud.githubusercontent.com/assets/5633774/24635791/a789c244-188a-11e7-9fc3-6ad9db126e58.png)  
     - output space:  
     ![perceptron output space](https://cloud.githubusercontent.com/assets/5633774/24635806/bde4a824-188a-11e7-828f-c244ccf5cf90.png)  
