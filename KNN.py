@@ -19,6 +19,7 @@ class KNN:
         """
         self.k = K
         
+        
     def _kd_tree(self, X):
         """
         return kd tree
@@ -26,7 +27,7 @@ class KNN:
         self.kd_tree = KDTree(X)
         
         
-    def knn_fit(self, X, Y):
+    def fit(self, X, Y):
         """
         training, store distance
         use kd tree 
@@ -37,7 +38,7 @@ class KNN:
         return self 
         
         
-    def knn_predict(self, XX):
+    def predict(self, XX):
         """
         prediction 
         """
@@ -46,7 +47,7 @@ class KNN:
         _, i = self.kd_tree.query(XX, k=self.k)
         # labels of the k-th closest data point
         labels = self.y[i]
-        print(labels)
+
         # majority voting based on labels
         # Counter.most_common(1) return [(label, number)]
         return Counter(labels).most_common(1)[0][0]
@@ -67,8 +68,8 @@ if __name__ == "__main__":
     Y = np.asarray([1, 1, -1, 1, -1, -1])
     
     knn = KNN(K=3)
-    knn.knn_fit(X, Y)
+    knn.fit(X, Y)
     
     x = [5,4]
-    y_pred = knn.knn_predict(x)
+    y_pred = knn.predict(x)
     print(f'data point: {x}, prediction: {y_pred}')

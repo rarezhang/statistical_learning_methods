@@ -118,7 +118,8 @@ supervised learning; binary classifiers; only works for linearly separable data;
     
 
 
-2. [K-Nearest Neighbor]()  
+2. [K-Nearest Neighbor](https://github.com/rarezhang/statistical_learning_methods/blob/master/KNN.py)  
+a non-parametric method, lazy learning, non-linear classifier  
     - feature space:  
     ![knn feature space](https://cloud.githubusercontent.com/assets/5633774/24672596/2f8d7ce0-192a-11e7-956c-6e1bb2ca2f45.png)  
     - output space:  
@@ -126,13 +127,33 @@ supervised learning; binary classifiers; only works for linearly separable data;
     - feature space --> output space: majority voting rule  
     ![knn](https://cloud.githubusercontent.com/assets/5633774/24672649/571feb8a-192a-11e7-8bc0-ef17b9ca9039.png)  
     note: **I** --> indicator function: ```if y=c I=1, o.w. I=0```  
-    - **_k_**:  
+    - **_K_**:  
         + small k (decrease approximation error; increase estimation error; sensitive to neighbors) --> complicated model --> prone to over-fitting  
         + large k (decrease estimation error; increase approximation error) --> simple model --> prone to under-fitting  
     - k-dimensional tree (kd tree): a space-partitioning data structure for organizing points in a k-dimensional space  
         
         
 3. [Naive Bayes]()  
+probabilistic classifiers, strong (naive) independence assumptions between the features  
+    - feature space:  
+    ![nb feature space](https://cloud.githubusercontent.com/assets/5633774/24683626/1cf7c6be-1955-11e7-889e-d881b4cc9d31.png)  
+    - output space:  
+    ![output space](https://cloud.githubusercontent.com/assets/5633774/24672626/41d6bd8a-192a-11e7-873d-b65d2925dad4.png)  
+    - feature space --> output space:
+        + prior belief:  
+        ![priors](https://cloud.githubusercontent.com/assets/5633774/24683746/fdee89dc-1955-11e7-91b8-fcc9749fe469.png)  
+        + conditional probability: independence assumptions between the features  
+        ![conditional](https://cloud.githubusercontent.com/assets/5633774/24683814/5c42e938-1956-11e7-803c-3fb7127cee96.png)  
+        + posterior probability:  
+        ![posterior](https://cloud.githubusercontent.com/assets/5633774/24683853/aae5ef0e-1956-11e7-9c4c-6fd574cdd732.png)  
+        + classification:  
+        ![nb_fun](https://cloud.githubusercontent.com/assets/5633774/24683869/dbeb9234-1956-11e7-8eb5-c68f0f69e3d0.png)  
+        simplify --> remove denominator:  
+        ![nb_fun_simple](https://cloud.githubusercontent.com/assets/5633774/24683884/f4c3dd3e-1956-11e7-9238-78dffcc54834.png)  
+
+    
+
+
 4. [Decision Tree]()  
 5. [Logistic Regression]()  
 6. [Support Vector Machine]()  

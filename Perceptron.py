@@ -31,7 +31,7 @@ class Perceptron:
         
     
         
-    def perceptron_fit(self, X, Y):
+    def fit(self, X, Y):
         """
         training 
         :para X: array like, (n, m): n: number of samples; m: number of features
@@ -73,14 +73,14 @@ class Perceptron:
         return self
         
         
-    def perceptron_predict(self, XX):
+    def predict(self, XX):
         """
         testing or predict 
         """
         a = sum([ww*xx for ww, xx in zip(self.w, XX)]) + self.b # compute activation for the test example: a = w * XX + b 
         return self._sign(a)
         
-    def averaged_perceptron_fit(self, X, Y):
+    def averaged_fit(self, X, Y):
         """
         original perceptron: counts later points more than it counts earlier point        
         to get better generalization --> averaged perceptron 
@@ -130,14 +130,14 @@ if __name__ == "__main__":
     Y = np.asarray([1, 1, -1])
     
     perceptron = Perceptron(max_iter=20)
-    perceptron.perceptron_fit(X, Y)
+    perceptron.fit(X, Y)
     print(f'perceptron weight: {perceptron.w} and bias: {perceptron.b}')
-    y = [perceptron.perceptron_predict(XX) for XX in X]
+    y = [perceptron.predict(XX) for XX in X]
     print(f'perceptron prediction: {y}')
         
-    perceptron.averaged_perceptron_fit(X, Y)
+    perceptron.averaged_fit(X, Y)
     print(f'averaged perceptron weight: {perceptron.w} and bias: {perceptron.b}')
-    y = [perceptron.perceptron_predict(XX) for XX in X]
+    y = [perceptron.predict(XX) for XX in X]
     print(f'averaged perceptron prediction: {y}')
   
     
