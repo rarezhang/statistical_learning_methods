@@ -133,7 +133,7 @@ a non-parametric method, lazy learning, non-linear classifier
     - k-dimensional tree (kd tree): a space-partitioning data structure for organizing points in a k-dimensional space  
         
         
-3. [Naive Bayes]()  
+3. [Naive Bayes](https://github.com/rarezhang/statistical_learning_methods/blob/master/NaiveBayes.py)  
 probabilistic classifiers, strong (naive) independence assumptions between the features  
     - feature space:  
     ![nb feature space](https://cloud.githubusercontent.com/assets/5633774/24683626/1cf7c6be-1955-11e7-889e-d881b4cc9d31.png)  
@@ -155,6 +155,36 @@ probabilistic classifiers, strong (naive) independence assumptions between the f
 
 
 4. [Decision Tree]()  
+interpretability, fast algorithm  
+- decision tree: uses a decision tree as a predictive model: maps observations about an item (represented in the branches) to conclusions about the item's target value (represented in the leaves)  
+![decision tree](https://cloud.githubusercontent.com/assets/5633774/24729045/4b86bb2c-1a11-11e7-975c-4394b08b2eaa.png)  
+    + node:  
+        * internal node: test on an attribute  
+        * leaf node: class  
+    + directed edge: the outcome of the test  
+    + paths from root to leaf: classification rules  
+- entropy:  
+    + uncertainty of random variables: larger the entropy, greater the uncertainty  
+    ![entropy increase](https://cloud.githubusercontent.com/assets/5633774/24729554/a71626f6-1a13-11e7-820a-597a2bd2f93f.png)  
+    + used to decide which feature to split on at each step in building the tree  
+    + based on the concept of entropy:  
+    the entropy of the random variable **_X_**:  
+    ![random variable](https://cloud.githubusercontent.com/assets/5633774/24729359/a9548a3a-1a12-11e7-933e-d162633b33a8.png)  
+    ![entropy](https://cloud.githubusercontent.com/assets/5633774/24729378/c3fae7da-1a12-11e7-852f-e003179b93be.png)  
+    entropy is independent to the value of **_X_**, only depend on the distribution of **_X_**  
+    ![entropy2](https://cloud.githubusercontent.com/assets/5633774/24729420/045b6e8a-1a13-11e7-9800-5c68c02b7f8e.png)  
+    + conditional entropy:  
+    ![conditional entropy](https://cloud.githubusercontent.com/assets/5633774/24729633/fc3f1f70-1a13-11e7-855b-d5c1a300a52f.png)  
+- information gain (mutual information):  
+![information gain](https://cloud.githubusercontent.com/assets/5633774/24729669/2480daf0-1a14-11e7-9013-53e3934a4996.png)  
+    + **_H(D)_**: 对数据集D进行分类的不确定性  
+    + **_H(D|A)_**: 特征A给定的条件下对数据集D进行分类的不确定性  
+    + **_g(D|A)_**: 由于特征A使得对数据集D的分类的不确定性减少的程度  
+- information gain ratio:  
+![information gain ratio](https://cloud.githubusercontent.com/assets/5633774/24729872/2c1ecfdc-1a15-11e7-8277-7b0de4203ac8.png)  
+    
+
+
 5. [Logistic Regression]()  
 6. [Support Vector Machine]()  
 7. [AdaBoost]()  
